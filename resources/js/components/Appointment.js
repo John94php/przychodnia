@@ -10,12 +10,12 @@ const Appointment = ({appointment}) => {
 return (
     <div className="card-body bg-white">
         <h3>{appointment.title}</h3>
-        <p>Pacjent</p>
-        <p>{appointment.fname_patient}</p>
-        <p>Lekarz przyjmujący</p>
-        <p>{appointment.fname_doctor}</p>
-        <i>Data wizyty: </i>
-        <i>{appointment.date}</i>
+        <p>Pacjent <b>{appointment.fname_patient}</b></p>
+
+        <p>Lekarz przyjmujący <b>{appointment.fname_doctor}</b></p>
+        
+        <i>Data wizyty:         <b>{appointment.date}</b></i>
+
     </div>
 )
 };

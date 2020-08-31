@@ -65974,7 +65974,7 @@ var Appointment = function Appointment(_ref) {
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card-body bg-white"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, appointment.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Pacjent"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, appointment.fname_patient), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lekarz przyjmuj\u0105cy"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, appointment.fname_doctor), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", null, "Data wizyty: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", null, appointment.date));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, appointment.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Pacjent ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, appointment.fname_patient)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lekarz przyjmuj\u0105cy ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, appointment.fname_doctor)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", null, "Data wizyty:         ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, appointment.date)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Appointment);
@@ -66218,8 +66218,8 @@ if (document.getElementById('list')) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\WebServ\httpd-users\przychodnia2\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\WebServ\httpd-users\przychodnia2\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\WebServ\httpd-users\przychodnia\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\WebServ\httpd-users\przychodnia\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
