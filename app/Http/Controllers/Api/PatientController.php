@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
-use App\Repositories\Tasks;
 use Illuminate\Http\Request;
 use App\Repositories\Patients;
 class PatientController extends Controller
