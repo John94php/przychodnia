@@ -109,7 +109,7 @@ class Patients extends Repository {
             Log::error(
                 'Błąd przy usuwaniu danych pacjenta',
                 [
-                    'message' =>$e->getMessage();
+                    'message' =>$e->getMessage()
                 ]
                 );
                 $error = true;
