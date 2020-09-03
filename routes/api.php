@@ -36,5 +36,5 @@ Route::prefix('patients')->group(function () {
    Route::post('/', 'Api\PatientController@store')->name('patients.store');
    Route::get('/{$id}','Api\PatientController@show')->name('patients.show');
    Route::put('/{$id}','Api\PatientController@update')->name('patients.update');
-    Route::delete('/{$id}','Api\PatientController@delete')->name('patients.delete');
+   Route::delete('/{$id}','Api\PatientController@delete')->name('patients.delete');
 });

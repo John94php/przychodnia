@@ -12,13 +12,9 @@ class PatientController extends Controller
     public function __construct()
     {
         $this->patientRepository = new Patients;
-        
     }
     public function index() {
-        $patientsFetch =
-        $this
-        ->patientRepository
-        ->all();
+        $patientsFetch = $this->patientRepository->all();
         if($patientsFetch->hasError()) {
             return response()->json($patientsFetch->getItems(),500);
             

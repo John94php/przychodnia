@@ -1,19 +1,20 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import Patient from './Patient';
-class PatientList extends Component {
+class Patientlist extends Component {
+  
     constructor() {
         super();
         this.state = {
             patients: []
         }
     }
-        componentDidMount() {
-            fetch(`/api/patients`)
-            .then(response => {
-                return response.json();
+componentDidMount() {
+    fetch(`/api/patients`)
+        .then(response => {
+            return response.json();
             })
-            .then(patients => {
+        .then(patients => {
                this.setState({patients}) 
             });
         }
@@ -24,7 +25,8 @@ class PatientList extends Component {
             return this.state.patients.map(patient => {
                 return (
                     <tbody>
-                        <tr onclick={() => this.handleClick(patient)} key={patient.id} >
+                        <tr onClick={() => this.handleClick(patient)}
+                         key={patient.id} >
                             
                             <td>{patient.fname}</td>
                             <td>{patient.PESEL}</td>
@@ -57,7 +59,7 @@ class PatientList extends Component {
 
 
 
-export default PatientList;
+export default Patientlist;
 if(document.getElementById('patientlist')) {
-    ReactDOM.render(<PatientList/>, document.getElementById('patientlist'));
+    ReactDOM.render(<Patientlist/>, document.getElementById('patientlist'));
 }

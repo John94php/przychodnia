@@ -1,18 +1,19 @@
-<?
+<?php
 namespace App\Repositories;
 use App\Patient;
 use App\Http\Resources\Patient as PatientResource;
 use Illuminate\Support\Facades\Log;
-class Patients extends Repository {
-    
-    
+
+class Patients extends Repository
+ {
     public function all(): Repository {
         try {
             $patients = Patient::all();
             $patientsList = PatientResource::collection($patients);
         }
         catch(\Exception $e) {
-            Log::error("Błąd pobierania danych",[
+            Log::error(
+                'Błąd pobierania danych',[
                 'message' =>$e->getMessage()
             ]);
             $error = true;
@@ -26,7 +27,7 @@ class Patients extends Repository {
     {
         try {
             $patient = Patient::create([
-                'fname' =>$data['fname'],
+                'fname' => $data['fname'],
                 'PESEL' => $data['PESEL'],
                 'tel' => $data['tel'],
                 'email' => $data['email'],
@@ -36,7 +37,7 @@ class Patients extends Repository {
                 'house' => $data['house'],
                 'flat' => $data['flat'] 
             ]);
-            $singleItem =new PatientResource($patient);
+            $singleItem = new PatientResource($patient);
         }
 
         catch (\Exception $e) {

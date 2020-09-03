@@ -12,8 +12,8 @@ const Patient = ({patient}) => {
 return (
     <div className="card-body bg-white">
         <ul>
-            <li> {patient.fname}</li>
-            <li>{patient.PESEL}</li>
+            <li> <label className="badge badge-info">Imię i Nazwisko</label>&nbsp;{patient.fname}</li>
+            <li><label className="badge badge-info">PESEL</label>&nbsp;{patient.PESEL}</li>
             <li>{patient.tel}</li>
             <li>{patient.email}</li>
             <li>{patient.zipcode}</li>

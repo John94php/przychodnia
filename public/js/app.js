@@ -65796,7 +65796,7 @@ __webpack_require__(/*! ./components/Main */ "./resources/js/components/Main.js"
 
 __webpack_require__(/*! ./components/Appointment */ "./resources/js/components/Appointment.js");
 
-__webpack_require__(/*! ./components/PatientList */ "./resources/js/components/PatientList.js");
+__webpack_require__(/*! ./components/Patientlist */ "./resources/js/components/Patientlist.js");
 
 __webpack_require__(/*! ./components/Patient */ "./resources/js/components/Patient.js");
 
@@ -66046,16 +66046,20 @@ var Patient = function Patient(_ref) {
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card-body bg-white"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, " ", patient.fname), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, patient.PESEL), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, patient.tel), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, patient.email), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, patient.zipcode), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, patient.city), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, patient.street), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, patient.house), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, patient.flat)));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "badge badge-info"
+  }, "Imi\u0119 i Nazwisko"), "\xA0", patient.fname), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "badge badge-info"
+  }, "PESEL"), "\xA0", patient.PESEL), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, patient.tel), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, patient.email), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, patient.zipcode), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, patient.city), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, patient.street), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, patient.house), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, patient.flat)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Patient);
 
 /***/ }),
 
-/***/ "./resources/js/components/PatientList.js":
+/***/ "./resources/js/components/Patientlist.js":
 /*!************************************************!*\
-  !*** ./resources/js/components/PatientList.js ***!
+  !*** ./resources/js/components/Patientlist.js ***!
   \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -66093,15 +66097,15 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-var PatientList = /*#__PURE__*/function (_Component) {
-  _inherits(PatientList, _Component);
+var Patientlist = /*#__PURE__*/function (_Component) {
+  _inherits(Patientlist, _Component);
 
-  var _super = _createSuper(PatientList);
+  var _super = _createSuper(Patientlist);
 
-  function PatientList() {
+  function Patientlist() {
     var _this;
 
-    _classCallCheck(this, PatientList);
+    _classCallCheck(this, Patientlist);
 
     _this = _super.call(this);
     _this.state = {
@@ -66110,7 +66114,7 @@ var PatientList = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  _createClass(PatientList, [{
+  _createClass(Patientlist, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       var _this2 = this;
@@ -66137,7 +66141,7 @@ var PatientList = /*#__PURE__*/function (_Component) {
 
       return this.state.patients.map(function (patient) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
-          onclick: function onclick() {
+          onClick: function onClick() {
             return _this3.handleClick(patient);
           },
           key: patient.id
@@ -66161,13 +66165,13 @@ var PatientList = /*#__PURE__*/function (_Component) {
     }
   }]);
 
-  return PatientList;
+  return Patientlist;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (PatientList);
+/* harmony default export */ __webpack_exports__["default"] = (Patientlist);
 
 if (document.getElementById('patientlist')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PatientList, null), document.getElementById('patientlist'));
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Patientlist, null), document.getElementById('patientlist'));
 }
 
 /***/ }),

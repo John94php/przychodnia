@@ -25,7 +25,7 @@ class Patient extends JsonResource
                 'city' =>$this->city,
                 'street' =>$this->street,
                 'house' =>$this->house,
-                'flat' =>$this->flat
+                'flat' =>$this->flat,
             ];
     }
 }
