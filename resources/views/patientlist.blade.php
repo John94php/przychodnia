@@ -11,7 +11,7 @@
 <body class="container jumbotron">
 <h2 class="text-center pt-5"> PRZYCHODNIA - Lista Pacjentów </h2>
 <a href="/index" class="btn btn-outline-dark">Powrót</a>
-<div id="list"></div>
+<div id="patientlist"></div>
 <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>

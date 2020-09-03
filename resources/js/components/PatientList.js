@@ -1,32 +1,63 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import Patient from './Patient';
 class PatientList extends Component {
-    render() {
-        return(
-          <div>
-              <table class="table table-hovered">
-                  <thead>
-                      <th>Imię i nazwisko</th>
-                      <th>PESEL</th>
-                      <th>Akcje</th>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td>&nbsp;</td>
-                          <td>&nbsp;</td>
-                          <td>
-                              <a href="#" class="btn btn-info">Podgląd</a>
-                              <a href="#" class="btn btn-warning">Edycja</a>
-                          </td>
-                      </tr>
-                  </tbody>
-              </table>
-          </div>  
-        );
+    constructor() {
+        super();
+        this.state = {
+            patients: []
+        }
     }
-}
+        componentDidMount() {
+            fetch(`/api/patients`)
+            .then(response => {
+                return response.json();
+            })
+            .then(patients => {
+               this.setState({patients}) 
+            });
+        }
+        handleClick(patient) {
+            this.setState({currentPatient : patient});
+        }
+        renderPatients() {
+            return this.state.patients.map(patient => {
+                return (
+                    <tbody>
+                        <tr onclick={() => this.handleClick(patient)} key={patient.id} >
+                            
+                            <td>{patient.fname}</td>
+                            <td>{patient.PESEL}</td>
+                            
+                        </tr>
+                    </tbody>
+                );
+            })
+        }
+        render() {
+            return(
+                <div id="app">
+                    <h3>Lista wszystkich Pacjentów</h3>
+                    <table className="table table-hovered">
+                        <thead>
+                            <th>Imię i Nazwisko</th>
+                            <th>PESEL</th>
+                        </thead>
+                        {this.renderPatients()}
+                    
+                    </table>
+                
+                <div className="col-8">
+                    <Patient patient={this.state.currentPatient ?? ''}/>
+                </div>
+                </div>
+            );
+        }
+    }
+
+
 
 export default PatientList;
-if(document.getElementById('list')) {
-    ReactDOM.render(<PatientList/>, document.getElementById('list'));
+if(document.getElementById('patientlist')) {
+    ReactDOM.render(<PatientList/>, document.getElementById('patientlist'));
 }

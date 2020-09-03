@@ -31,3 +31,10 @@ Route::prefix('appointments')->group(function () {
     Route::put('/{id}', 'Api\AppoitnemntController@update')->name('appointments.update');
     Route::delete('/{id}', 'Api\AppointmentController@delete')->name('appointments.delete');
 });
+Route::prefix('patients')->group(function () {
+   Route::get('/', 'Api\PatientController@index')->name('patients.list');
+   Route::post('/', 'Api\PatientController@store')->name('patients.store');
+   Route::get('/{$id}','Api\PatientController@show')->name('patients.show');
+   Route::put('/{$id}','Api\PatientController@update')->name('patients.update');
+    Route::delete('/{$id}','Api\PatientController@delete')->name('patients.delete');
+});

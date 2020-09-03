@@ -14,5 +14,5 @@ require('./bootstrap');
 
 require('./components/Main');
 require('./components/Appointment');
-require('./components/AddAppointment');
 require('./components/PatientList');
+require('./components/Patient');
